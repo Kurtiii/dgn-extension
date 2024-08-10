@@ -1,0 +1,28 @@
+{
+    "name": "DGN Powerup",
+    "description": "Endlich kann man auch angemeldet bleiben...",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png",
+        "512": "icon512.png"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.domgymnasium-nmb.de/*",
+                "http://*.domgymnasium-nmb.de/*"
+            ],
+            "run_at": "document_end",
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ]
+}
